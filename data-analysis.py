@@ -20,4 +20,11 @@ salary = alumni['Salary'].agg([np.mean, np.median, np.std])
 #print(salary)
 #print(alumni['Fee'].value_counts())
 over_15000 = alumni[alumni['Fee'] >=15000]
-print(over_15000)
+#print(over_15000)
+diploma_type_count = alumni['Diploma Type'].value_counts()
+#print(diploma_type_count)
+position = np.arange(2)
+columns = alumni['Diploma Type']
+plt.xticks(position, columns)
+plt.bar(position, diploma_type_count, color = 'green',  width=0.4)
+plt.show()
